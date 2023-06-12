@@ -277,17 +277,19 @@ no *verifica_valor_maior(no *lista){
 
 no *maior_ao_menor(no *lista){
     
-    no *no_atual, *maior, *aux;
+    no *no_atual, *maior, *aux, *nova_lista = NULL;
+    float maior_valor;
     maior = verifica_valor_maior(lista);
     no_atual = lista;
 
     while(no_atual != NULL){
-
+        
+        
         if(maior->info > no_atual->info){
 
-            aux = maior;
+            maior_valor = maior->info;
+            insere_no_fim(nova_lista, maior_valor);
             
-
         }
 
     }
